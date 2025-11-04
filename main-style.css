@@ -11,6 +11,10 @@
     border-style: none;
 }
 
+html, body {
+  overflow: hidden;
+}
+
 body {
     display: flex;
     flex: 1 1 100vw;
