@@ -12,7 +12,7 @@
   <header>
     <a href="categorias.html"><img src="img/voltar.png" alt="voltar"></a>
     <h2>Item 1</h2>
-    <a href="cart.html"><img id="cart" src="img/img-cart.png" alt="cart"></a>
+    <a href="#"><img id="cart" src="img/img-cart.png" alt="cart"></a>
   </header>
 
   <main class="pratos">
@@ -25,22 +25,21 @@
 
       <div class="container-info-preco">
         <div class="info">
-          <h3>Temaki de Salmão</h3>
-          <p>Salmão fresco, arroz temperado, nori, gergelim, cream cheese</p>
+          <h3>Sushi</h3>
+          <p>Salmao, Shoiu, Algas marinhas, Arroz, Sashimi</p>
         </div>
 
         <div class="info-footer">
           <div class="avaliacao">
             <img src="img/star.png" alt="star">
-            <p>4.7</p>
+            <p>4.5</p>
           </div>
 
           <div class="preco">
             <img src="img/cifrao.png" alt="cifrao">
-            <p>29.90</p>
+            <P>25.99</P>
           </div>
         </div>
-
         <div class="btn-pratos">
           <button>Adicionar</button>
         </div>
@@ -55,22 +54,21 @@
 
       <div class="container-info-preco">
         <div class="info">
-          <h3>Hot Roll</h3>
-          <p>Salmão, cream cheese, nori, arroz, empanado crocante</p>
+          <h3>Sashimi</h3>
+          <p>Salmao, Shoiu, Algas marinhas, Arroz, Sashimi</p>
         </div>
 
         <div class="info-footer">
           <div class="avaliacao">
             <img src="img/star.png" alt="star">
-            <p>4.6</p>
+            <p>4.5</p>
           </div>
 
           <div class="preco">
             <img src="img/cifrao.png" alt="cifrao">
-            <p>22.50</p>
+            <P>25.99</P>
           </div>
         </div>
-
         <div class="btn-pratos">
           <button>Adicionar</button>
         </div>
@@ -85,22 +83,21 @@
 
       <div class="container-info-preco">
         <div class="info">
-          <h3>Sashimi de Salmão</h3>
-          <p>Salmão fresco em fatias, wasabi, molho shoyu</p>
+          <h3>Sushi</h3>
+          <p>Salmao, Shoiu, Algas marinhas, Arroz, Sashimi</p>
         </div>
 
         <div class="info-footer">
           <div class="avaliacao">
             <img src="img/star.png" alt="star">
-            <p>4.8</p>
+            <p>4.5</p>
           </div>
 
           <div class="preco">
             <img src="img/cifrao.png" alt="cifrao">
-            <p>32.00</p>
+            <P>25.99</P>
           </div>
         </div>
-
         <div class="btn-pratos">
           <button>Adicionar</button>
         </div>
@@ -115,22 +112,21 @@
 
       <div class="container-info-preco">
         <div class="info">
-          <h3>Uramaki Califórnia</h3>
-          <p>Kani, pepino, manga, nori, arroz com gergelim</p>
+          <h3>Sushi</h3>
+          <p>Salmao, Shoiu, Algas marinhas, Arroz, Sashimi</p>
         </div>
 
         <div class="info-footer">
           <div class="avaliacao">
             <img src="img/star.png" alt="star">
-            <p>4.4</p>
+            <p>4.5</p>
           </div>
 
           <div class="preco">
             <img src="img/cifrao.png" alt="cifrao">
-            <p>19.90</p>
+            <P>25.99</P>
           </div>
         </div>
-
         <div class="btn-pratos">
           <button>Adicionar</button>
         </div>
@@ -161,7 +157,40 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const botoesAdicionar = document.querySelectorAll(".btn-pratos button");
+
+      botoesAdicionar.forEach(botao => {
+        botao.addEventListener("click", () => {
+          const prato = botao.closest(".container-pratos");
+          const nome = prato.querySelector(".info h3").innerText;
+          const preco = prato.querySelector(".preco p").innerText;
+          const imagem = prato.querySelector(".img-pratos img").getAttribute("src");
+
+          // Cria o objeto do item
+          const item = { nome, preco, imagem, quantidade: 1 };
+
+          // Verifica se já existe um carrinho salvo
+          let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+          // Verifica se o item já está no carrinho
+          const itemExistente = carrinho.find(i => i.nome === nome);
+
+          if (itemExistente) {
+            itemExistente.quantidade += 1; // soma +1 na quantidade
+          } else {
+            carrinho.push(item);
+          }
+
+          // Salva de volta no localStorage
+          localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+          alert(`${nome} adicionado ao carrinho!`);
+        });
+      });
+    });
+  </script>
 
 </body>
 

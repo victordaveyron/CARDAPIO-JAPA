@@ -158,6 +158,16 @@ main {
   position: right;
 }
 
+.total-container {
+  width: 100%;
+  padding: 15px;
+  background: var(--rice);
+  position: sticky;
+  text-align: center;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
 aside{
   display: flex;
   flex-direction: column;
@@ -216,6 +226,53 @@ form {
   background: var(--rice);
 }
 
+.pagamento-container {
+  margin-top: 5px;
+}
+
+.pagamento-container h3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  color: var(--rice)
+}
+
+.pagamento-opcoes {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-pagamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 30px;
+  background: var(--rice);
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: .2s;
+  font-size: 10pt;
+}
+
+.btn-pagamento input {
+  display: none;
+}
+
+.btn-pagamento:hover {
+  background: var(--black);
+  color: var(--black);
+}
+
+.btn-pagamento input:checked + span {
+  color: var(--salmon);
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
 .input-observacoes {
   width: 250px;
   height: 90px;
@@ -223,12 +280,22 @@ form {
   background: var(--rice);
 }
 
-form button {
+.btn-enviar {
   width: 200px;
   height: 30px;
   border-radius: 10px;
   background: var(--rice);
+  transition: transform 0.1s ease;
+}
 
+.btn-enviar:hover {
+  background-color: var(--black);
+  cursor: pointer;
+  color: var(--rice);
+}
+
+.btn-enviar:active {
+  transform: scale(1.05);
 }
 
 footer {
