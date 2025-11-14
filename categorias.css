@@ -1,0 +1,177 @@
+:root {
+    --salmon: #f74343;
+    --black: #1c1c1c;
+    --rice: #f6f8db;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-style: none;
+}
+
+input {
+  background-color: var(--black);
+  box-shadow: 0px 0px 3px rgba(255, 255,255,0.8);
+  color: var(--rice);
+  padding: 0 10px;
+}
+
+
+a {
+  color: var(--salmon);
+  outline: none;
+  box-shadow: none;
+}
+
+body {
+  display: flex;
+  margin: 3px;
+  flex-wrap: wrap;
+  background: var(--black);
+}
+
+header, 
+main {
+  display: flex;
+  margin: 3px;
+  background: #a1a1a1;
+}
+
+header {
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 1 100vw;
+  height: 50px;
+  background-color: var(--black);
+}
+
+header h1 {
+  color: var(--rice);
+}
+
+header img {
+  width: 30px;
+}
+
+#logo {
+  width: 30px;
+}
+
+.nav span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--rice);
+    opacity: 0.5;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.info span {
+  color: var(--black);
+}
+
+
+
+
+main {
+  justify-content: center;
+  align-items: center;
+  height: 660px;
+  margin-top: 30px;
+  background-color: var(--black);
+  /*border: 1px solid red;*/
+}
+
+
+.container-categorias {
+  display: flex;
+  flex: 1 1 100vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 560px;
+  gap: 30px;
+  padding: 0 30px;
+  /*border: 1px solid gold;*/
+}
+
+.itens-categorias {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90px;
+  height: 105px;
+  margin: 3px;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  gap: 5px;
+}
+
+.titulo-categorias {
+  display: flex;
+  flex: 1 1 100vw;
+  justify-content: space-between;
+  padding: 0 17px;
+}
+
+.titulo-categorias h3 {
+  color: var(--rice);
+}
+
+.itens-categorias:hover {
+  transform: scale(1.2);
+}
+
+.itens-categorias img {
+  width: 55px;
+  
+}
+
+.itens-categorias p {
+  color: var(--rice);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 80px;
+  padding: 3px;
+  background-color: var(--black);
+  gap: 30px;
+  
+  /*border: 1px solid gold;*/
+}
+
+.menu-footer a {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-footer img {
+  width: 30px;
+}
+
+.menu-footer h4 {
+  color: #c5c1c1;
+}
+
+span {
+  color: var(--salmon);
+}
+
