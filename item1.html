@@ -14,11 +14,11 @@
     <h2>Item 1</h2>
     <a href="cart.html"><img id="cart" src="img/img-cart.png" alt="cart"></a>
   </header>
-  
+
   <main class="pratos">
 
-<!--ITEM 1-->
-    <section class="container-pratos">
+    <!--ITEM 1-->
+    <section class="container-pratos" data-search="carpaccio">
       <div class="img-pratos">
         <img src="img-pratos/carpaccio.jpeg" alt="img-prato">
       </div>
@@ -48,7 +48,7 @@
     </section>
 
     <!--ITEM 2-->
-    <section class="container-pratos">
+    <section class="container-pratos" data-search="nigiri">
       <div class="img-pratos">
         <img src="img-pratos/nigiri.jpeg" alt="img-prato">
       </div>
@@ -78,7 +78,7 @@
     </section>
 
     <!--ITEM 3-->
-    <section class="container-pratos">
+    <section class="container-pratos" data-search="sashimi">
       <div class="img-pratos">
         <img src="img-pratos/sashimi.jpeg" alt="img-prato">
       </div>
@@ -108,7 +108,7 @@
     </section>
 
     <!--ITEM 4-->
-    <section class="container-pratos">
+    <section class="container-pratos" data-search="pudim">
       <div class="img-pratos">
         <img src="img-pratos/pudim.jpeg" alt="img-prato">
       </div>
@@ -160,6 +160,34 @@
   </footer>
 
   <script src="script.js"></script>
+
+
+  <!--SRIPT BUSCAR -->
+  
+  <script>
+    // pegar parâmetro da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const pratoProcurado = urlParams.get("prato");
+
+    // se veio um prato na URL...
+    if (pratoProcurado) {
+      // procurar o item com data-search igual
+      const alvo = document.querySelector(`[data-search="${pratoProcurado}"]`);
+
+      if (alvo) {
+        // rolar de forma suave
+        alvo.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        // opcional: destacar o item por 1 segundo
+        alvo.style.transition = "background 0.1s";
+        alvo.style.background = "#f6f8db";
+
+        setTimeout(() => {
+          alvo.style.background = "transparent";
+        }, 1200);
+      }
+    }
+  </script>
 </body>
 
 </html>

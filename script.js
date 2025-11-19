@@ -41,12 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (carrinho.length === 0) {
             listaCarrinho.innerHTML = ""; // limpa antes
 
-           const img = document.createElement("img");
-           img.src = "img/carrinho-vazio.png";
-           img.alt = "Carrinho vazio";
-           img.classList.add("img-carrinho-vazio");
-          
-           listaCarrinho.appendChild(img);
+            const img = document.createElement("img");
+            img.src = "img/carrinho-vazio.png";
+            img.alt = "Carrinho vazio";
+            img.classList.add("img-carrinho-vazio");
+
+            listaCarrinho.appendChild(img);
             if (totalSpan) totalSpan.innerText = "0.00";
         } else {
             carrinho.forEach(item => {
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ---------------------------------------------------------------------
     //  ENVIAR PEDIDO (GERAR MENSAGEM)
     // ---------------------------------------------------------------------
-    const btnEnviar = document.querySelector(".btn-enviar");
+    const btnEnviar = document.getElementById("btn-enviar-pedido");
 
     if (btnEnviar) {
         btnEnviar.addEventListener("click", (e) => {
@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return acc + parseFloat(item.preco.replace(",", ".")) * item.quantidade;
             }, 0).toFixed(2);
 
+            const numeroDestinoPedido = '5561995162974'
             let mensagem = `
 -------------------
 Pedido: ${nomeCliente}
@@ -162,9 +163,13 @@ ${tipoEntrega === "entrega" ? "\nEndereço: " + endereco : ""}
 Obs: ${obs}
             `;
 
-            console.log(mensagem);
+            const textoCodificadoPedido = encodeURIComponent(mensagem);
+            const url = `https://api.whatsapp.com/send?phone=${numeroDestinoPedido}&text=${textoCodificadoPedido}`;
+
+            window.open(url, '_blank');
         });
     }
+
 });
 
 
