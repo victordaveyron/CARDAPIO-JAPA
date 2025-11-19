@@ -9,7 +9,7 @@
 
 <body>
   <header>
-    <a href="cardapio.html"><img src="img/voltar.png" alt="voltar"></a>
+    <a href="javascript:history.back()"><img src="img/voltar.png" alt="voltar"></a>
         <h1>Contato</h1>
     <img id="logo" src="img/logo-img.png" alt="logo">
     </header>
@@ -17,19 +17,20 @@
   <main>
     <section class="container1">
       <h2>Entre em contato!</h2>
-      <div class="links">
+      <div class="contatos">
            <img src="img/phone.png" alt="telefone">
-           <a href="#">61.9999.999</a>
+           <p>61.9999.999</p>
         </div>
           
-        <div class="links">
+        <div class="contatos">
            <img src="img/mail.png" alt="email">
-           <a href="#">contato@contato.com</a>
+           <p>contato@contato.com</p>
         </div>     
         
-        <div class="links">
+        <div class="contatos">
            <img src="img/loc.png" alt="endereco">
-           <a href="#">QNN 66 Conj.j lote 444</a>
+           <a href="https:www
+           googlemaps.com">QNN 66 Conj.j lote 444</a>
         </div>
       </div>
     </section>
@@ -44,7 +45,7 @@
         <input class="nome-form"type="text" placeholder= "Seu nome">
         <input class="sugestao-form" type="text" placeholder="Sugestão">
         <input class="descricao-form" type="text" placeholder="Descrição">
-        <button>Enviar</button>
+        <button onclick="enviarwhatsapp()">Enviar</button>
       </form>
   </aside>
   
@@ -64,6 +65,7 @@
       <h4><span>Contato</span></h4></a>
     </div>   
   </footer>
+  <script href="sript.js"></script>
 </body>
 
 </html>

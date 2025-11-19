@@ -65,7 +65,7 @@ main {
   gap: 20px;
 }
 
-.links {
+.contatos {
   display: flex;
   flex:1 1 100vw;
   max-height: 30px;
@@ -74,7 +74,7 @@ main {
   gap: 5px;
 }
 
-.links img {
+.contatos img {
   width: 30px;
   height: 30px;
 }
@@ -99,6 +99,11 @@ form {
   display: flex;
   flex-direction: column;
   margin-bottom:  60px;
+}
+
+input {
+  padding-left: 20px;
+  padding-top: 1px;
 }
 
 .nome-form,
@@ -142,8 +147,6 @@ footer {
   padding: 3px;
   background-color: var(--black);
   gap: 30px;
-  
-  /*border: 1px solid gold;*/
 }
 
 .menu-footer a {

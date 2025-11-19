@@ -39,7 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (listaCarrinho) {
         if (carrinho.length === 0) {
-            listaCarrinho.innerHTML = "<p>Seu carrinho está vazio 😔</p>";
+            listaCarrinho.innerHTML = ""; // limpa antes
+
+           const img = document.createElement("img");
+           img.src = "img/carrinho-vazio.png";
+           img.alt = "Carrinho vazio";
+           img.classList.add("img-carrinho-vazio");
+          
+           listaCarrinho.appendChild(img);
             if (totalSpan) totalSpan.innerText = "0.00";
         } else {
             carrinho.forEach(item => {
@@ -159,3 +166,5 @@ Obs: ${obs}
         });
     }
 });
+
+

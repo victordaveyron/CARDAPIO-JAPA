@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="cardapio.css">
   <title>Cardapio - Japan</title>
 </head>
 
@@ -18,14 +18,14 @@
     
     
   </header>
-  
+
+<!-- CARROSSEL -->
   <section class="destaques">
     <div class="carrossel">
-  
 <!--SLIDE 1-->    
        <div class="slide">
          <div class="img-pratos">
-           <img src="img/img1.jpeg" alt="img-prato">
+           <img src="img-pratos/yakisoba.jpeg" alt="img-prato">
          </div>
         
          <div class="info-slide">
@@ -102,30 +102,34 @@
       <span></span><span></span><span></span><span></span>
     </div>
   </section>
-  
+ 
+ <!-- MENU RÁPIDO --> 
   <nav>
     <div class="titulo-menu">
       <h3>Categorias</h3>
       <a href="categorias.html">Veja mais</a>
     </div>
-    
     <section class="container-menu">
-      
-     <div class="itens-menu"><a href="#">
+
+<!-- ITEM 1 -->      
+     <div class="itens-menu"><a href="item1.html">
         <img src="img/sushi.png" alt="item1">
         <p>Item 1</p></a>
       </div>
-      
+ 
+ <!-- ITEM 2 -->     
     <div class="itens-menu"><a href="#">
         <img src="img/tempura.png" alt="item2">
         <p>Item 2</p></a>
       </div>
-      
+
+<!-- ITEM 3 -->      
     <div class="itens-menu"><a href="#">
         <img src="img/udon.png" alt="item3">
         <p>Item 3</p></a>
       </div>
-      
+ 
+ <!-- ITEM 4 -->     
     <div class="itens-menu"><a href="#">
         <img src="img/onigiri.png" alt="item4">
         <p>Item 4</p></a>
@@ -134,7 +138,8 @@
 
     </section>
   </nav>
-  
+ 
+ <!-- MAIS PEDIDOS --> 
   <main class="populares">
     <div class="titulo-populares">
       <h3>Mais pedidos</h3>
@@ -142,122 +147,124 @@
     </div>
     
  <!--ITEM 1-->   
-    <section class="container-populares">
-       <div class="img-pratos">
-         <img src="img/img1.jpeg" alt="img-prato">
+    <section class="container-pratos">
+       <div class="img-pratos" id="img-pratos">
+         <img src="img-pratos/hot.jpeg" alt="img-prato">
        </div>
         
         <div class="container-info-preco">
            <div class="info">
-            <h3>Sushi</h3>
-            <p>Salmao, Shoiu, Algas marinhas, Arroz, Sashimi</p>
+            <h3>Hot-Philadelfia</h3>
+            <p>Arroz para sushi, alga nori, salmão, cream cheese Philadelphia, farinha de trigo, farinha panko, ovo, gergelim.</p>
            </div>
            
            <div class="info-footer">
              <div class="avaliacao">
                <img src="img/star.png" alt="star">
-               <p>4.5</p>
+               <p>5.0</p>
              </div>
              
              <div class="preco">
                <img src="img/cifrao.png" alt="cifrao">
-               <P>25.99</P>
+               <P>22.00</P>
              </div>
            </div>
-           <div class="btn-populares">
+           <div class="btn-pratos">
              <button>Adicionar</button>
            </div>
         </div>
     </section>
     
  <!--ITEM 2-->   
-    <section class="container-populares">
+    <section class="container-pratos">
        <div class="img-pratos">
-         <img src="img/img1.jpeg" alt="img-prato">
+         <img src="img-pratos/temaki.jpeg" alt="img-prato">
        </div>
         
         <div class="container-info-preco">
            <div class="info">
-            <h3>Sushi</h3>
-            <p>Salmao, Shoiu, Algas marinhas, Arroz, Sashimi</p>
+            <h3>Temaki</h3>
+            <p>Arroz para sushi, alga nori, salmão, cream cheese, gergelim (opcional).</p>
            </div>
            
            <div class="info-footer">
              <div class="avaliacao">
                <img src="img/star.png" alt="star">
-               <p>4.5</p>
+               <p>4.6</p>
              </div>
              
              <div class="preco">
                <img src="img/cifrao.png" alt="cifrao">
-               <P>25.99</P>
+               <P>23.00</P>
              </div>
            </div>
-           <div class="btn-populares">
+           <div class="btn-pratos">
              <button>Adicionar</button>
            </div>
         </div>
     </section>
     
   <!--ITEM 3-->     
-    <section class="container-populares">
+    <section class="container-pratos">
        <div class="img-pratos">
-         <img src="img/img1.jpeg" alt="img-prato">
+         <img src="img-pratos/yakisoba.jpeg" alt="img-prato">
        </div>
         
         <div class="container-info-preco">
            <div class="info">
-            <h3>Sushi</h3>
-            <p>Salmao, Shoiu, Algas marinhas, Arroz, Sashimi</p>
+            <h3>Yakisoba</h3>
+            <p>Macarrão para yakisoba, camarão, repolho, cenoura, brócolis, cebola, shoyu, molho de ostra, óleo de gergelim (opcional).</p>
            </div>
            
            <div class="info-footer">
              <div class="avaliacao">
                <img src="img/star.png" alt="star">
-               <p>4.5</p>
+               <p>4.8</p>
              </div>
              
              <div class="preco">
                <img src="img/cifrao.png" alt="cifrao">
-               <P>25.99</P>
+               <P>27.00</P>
              </div>
            </div>
-           <div class="btn-populares">
+           <div class="btn-pratos">
              <button>Adicionar</button>
            </div>
         </div>
     </section>
     
  <!--ITEM 4-->   
-    <section class="container-populares">
+    <section class="container-pratos">
        <div class="img-pratos">
-         <img src="img/img1.jpeg" alt="img-prato">
+         <img src="img-pratos/urumaki.jpeg" alt="img-prato">
        </div>
         
         <div class="container-info-preco">
            <div class="info">
-            <h3>Sushi</h3>
-            <p>Salmao, Shoiu, Algas marinhas, Arroz, Sashimi</p>
+            <h3>Uramaki</h3>
+            <p>Arroz para sushi, alga nori, salmão, cream cheese, gergelim, pepino</p>
            </div>
            
            <div class="info-footer">
              <div class="avaliacao">
                <img src="img/star.png" alt="star">
-               <p>4.5</p>
+               <p>4.7</p>
              </div>
              
              <div class="preco">
                <img src="img/cifrao.png" alt="cifrao">
-               <P>25.99</P>
+               <P>17.00</P>
              </div>
            </div>
-           <div class="btn-populares">
+           <div class="btn-pratos">
              <button>Adicionar</button>
            </div>
         </div>
     </section>
     
   </main>
+
+ <!-- FOOTER --> 
   <footer>
     <div class="menu-footer"><a href="#">
       <img src="img/home-red.png" alt="home">
@@ -274,6 +281,8 @@
       <h4>Contato</h4></a>
     </div>
   </footer>
+  
+  <script src="script.js"></script>
 </body>
 
 </html>

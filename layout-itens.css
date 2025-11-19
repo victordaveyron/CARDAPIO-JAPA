@@ -70,6 +70,16 @@ main {
   padding-bottom: 100px;
 }
 
+.container-pratos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  gap: 5px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--rice);
+}
+
 .pratos {
   flex-direction: column;
 }
@@ -81,16 +91,8 @@ main {
   color: var(--rice);
 }
 
-.container-pratos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 25px;
-  gap: 10px;
-}
-
 .img-pratos img {
-  width: 110px;
+  width: 90px;
   border-radius: 10px;
   padding: 3px;
 }
@@ -138,6 +140,7 @@ main {
 
 .btn-pratos button:hover {
   background-color: var(--salmon);
+  color: var(--rice);
   transform: scale(1.1);
   box-shadow: 0px 0px 8px rgba(255,255,255,0.5);
 }
@@ -162,8 +165,6 @@ footer {
   padding: 3px;
   background-color: var(--black);
   gap: 30px;
-  
-  /*border: 1px solid gold;*/
 }
 
 .menu-footer a {
@@ -182,8 +183,4 @@ footer {
 
 .menu-footer h4 {
   color: #c5c1c1;
-}
-
-span {
-  color: var(--salmon);
 }

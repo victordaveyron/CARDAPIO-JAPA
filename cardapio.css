@@ -54,7 +54,6 @@ header img {
   width: 30px;
 }
 
-
 .search-container input[type="text"] {
       font-size: 12pt;
       height: 30px;
@@ -65,7 +64,6 @@ header img {
 }
 
 .search-container input[type="text"]:focus {
-      border-color: #007BFF;
       width: 200px;
 }
 
@@ -79,7 +77,6 @@ header img {
       cursor: pointer;
       font-size: 12pt;
       transition: 0.3s;
-      
   }
 
 .search-container button:hover {
@@ -94,6 +91,8 @@ header img {
   width: 30px;
 }
 
+/*----------------------------*/
+/* CARROSSEL */
 .destaques {
   justify-content: center;
   align-items: center;
@@ -102,7 +101,6 @@ header img {
   height: 200px;
   background: var(--black);
 }
-
 
 .carrossel {
     display: flex;
@@ -132,9 +130,9 @@ header img {
     padding: 0 17px;
   }
   
-  
+ /* IMAGEM CARROSSEL */ 
 .img-pratos img {
-  width: 110px;
+  width: 90px;
   border-radius: 10px;
   padding: 3px;
 }
@@ -144,7 +142,7 @@ header img {
     margin: 3px;
 }
   
-  .info-slide {
+.info-slide {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -192,7 +190,10 @@ header img {
 .info span {
   color: var(--black);
 }
+/* FIM CARROSSEL */
 
+/*----------------------------*/
+/* MENU RAPIDO */
 nav {
   justify-content: center;
   align-items: center;
@@ -201,6 +202,12 @@ nav {
   height: 150px;
   padding: 2px;
   background-color: var(--black);
+}
+
+.container-menu {
+  display: flex;
+  flex: 1 1 100vw;
+  justify-content: space-around;
 }
 
 .titulo-menu {
@@ -240,16 +247,11 @@ nav {
   color: var(--rice);
 }
 
-
-.container-menu {
-  display: flex;
-  flex: 1 1 100vw;
-  justify-content: space-around;
-}
-
+/*----------------------------*/
+/* MAIS PEDIDOS */
 main {
   flex: 1 1 100vw;
-  height: 750px;
+  height: 800px;
   margin-top: 30px;
   background-color: var(--black);
   padding-bottom: 100px;
@@ -266,10 +268,10 @@ main {
   color: var(--rice);
 }
 
-.container-populares {
+.container-pratos {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   margin: 25px;
   gap: 10px;
 }
@@ -310,12 +312,12 @@ main {
   color: var(--rice);
 }
 
-.btn-populares {
+.btn-pratos {
   display: flex;
   justify-content: right;
 }
 
-.btn-populares button:hover {
+.btn-pratos button:hover {
   background-color: var(--salmon);
   transform: scale(1.1);
   box-shadow: 0px 0px 8px rgba(255,255,255,0.5);
@@ -328,6 +330,8 @@ main {
   position: right;
 }
 
+/*----------------------------*/
+/* FOOTER */
 footer {
   display: flex;
   justify-content: space-around;
@@ -341,8 +345,6 @@ footer {
   padding: 3px;
   background-color: var(--black);
   gap: 30px;
-  
-  /*border: 1px solid gold;*/
 }
 
 .menu-footer a {
