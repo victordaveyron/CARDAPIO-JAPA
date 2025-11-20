@@ -1,7 +1,7 @@
 :root {
-    --salmon: #f74343;
-    --black: #1c1c1c;
-    --rice: #f6f8db;
+  --salmon: #f74343;
+  --black: #1c1c1c;
+  --rice: #f6f8db;
 }
 
 * {
@@ -14,7 +14,7 @@
 
 input {
   background-color: var(--black);
-  box-shadow: 0px 0px 3px rgba(255, 255,255,0.8);
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.8);
   color: var(--rice);
   padding: 0 10px;
 }
@@ -33,7 +33,7 @@ body {
   background: var(--black);
 }
 
-header, 
+header,
 .destaques,
 nav,
 main {
@@ -55,32 +55,32 @@ header img {
 }
 
 .search-container input[type="text"] {
-      font-size: 12pt;
-      height: 30px;
-      border-radius: 5px;
-      outline: none;
-      width: 160px;
-      transition: 0.3s;
+  font-size: 12pt;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  width: 160px;
+  transition: 0.3s;
 }
 
 .search-container input[type="text"]:focus {
-      width: 200px;
+  width: 200px;
 }
 
 .search-container button {
-      width: 30px;
-      height: 30px;
-      border: none;
-      background-color: var(--black);
-      color: var(--rice);
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 12pt;
-      transition: 0.3s;
-  }
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: var(--black);
+  color: var(--rice);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12pt;
+  transition: 0.3s;
+}
 
 .search-container button:hover {
-      box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
 }
 
 .search-container button img {
@@ -97,99 +97,113 @@ header img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex: 1 1 100vw;
+
   height: 200px;
   background: var(--black);
 }
 
 .carrossel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
-    scroll-behavior: smooth;
-    width: 370px;
-    height: 150px;
-    border-radius: 12px;
-    scrollbar-width: none; /* esconde a barra no Firefox */
-  }
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+  width: 370px;
+  height: 150px;
+  border-radius: 12px;
+  scrollbar-width: none;
+  /* esconde a barra no Firefox */
+}
 
 .carrossel::-webkit-scrollbar {
-    display: none; /* esconde a barra no Chrome */
-  }
+  display: none;
+  /* esconde a barra no Chrome */
+}
 
 .slide {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12pt;
-    color: var(--rice);
-    user-select: none;
-    gap: 3px;
-    padding: 0 17px;
-  }
-  
- /* IMAGEM CARROSSEL */ 
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12pt;
+  color: var(--rice);
+  user-select: none;
+  gap: 3px;
+  padding: 0 17px;
+}
+
+/* IMAGEM CARROSSEL */
 .img-pratos img {
   width: 90px;
   border-radius: 10px;
   padding: 3px;
 }
-  
+
 .info-slide h3,
 .info-slide p {
-    margin: 3px;
+  margin: 3px;
 }
-  
+
 .info-slide {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .btn-slide {
   display: flex;
   justify-content: right;
 }
-  
+
 .btn-slide button {
-  
-    width: 90px;
-    height: 30px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.6);
-}
-  
-  .btn-slide button:hover {
-    background-color: var(--salmon);
+
+  width: 90px;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
 }
 
-  .slide:nth-child(1) { background: var(--salmon); }
-  .slide:nth-child(2) { background: var(--rice); }
-  .slide:nth-child(3) { background: var(--salmon); }
-  .slide:nth-child(4) { background: var(--rice); }
+.btn-slide button:hover {
+  background-color: var(--salmon);
+}
 
-  /* Pontinhos de navegação */
+.slide:nth-child(1) {
+  background: var(--salmon);
+}
+
+.slide:nth-child(2) {
+  background: var(--rice);
+}
+
+.slide:nth-child(3) {
+  background: var(--salmon);
+}
+
+.slide:nth-child(4) {
+  background: var(--rice);
+}
+
+/* Pontinhos de navegação */
 .nav {
-    text-align: center;
-    margin-top: 10px;
+  text-align: center;
+  margin-top: 10px;
 }
-  
+
 
 .nav span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: var(--rice);
-    opacity: 0.5;
-    border-radius: 50%;
-    margin: 0 5px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--rice);
+  opacity: 0.5;
+  border-radius: 50%;
+  margin: 0 5px;
 }
 
 .info span {
   color: var(--black);
 }
+
 /* FIM CARROSSEL */
 
 /*----------------------------*/
@@ -240,7 +254,7 @@ nav {
 
 .itens-menu img {
   width: 55px;
-  
+
 }
 
 .itens-menu p {
@@ -250,7 +264,7 @@ nav {
 /*----------------------------*/
 /* MAIS PEDIDOS */
 main {
-  flex: 1 1 100vw;
+
   height: 800px;
   margin-top: 30px;
   background-color: var(--black);
@@ -307,6 +321,7 @@ main {
   width: 17px;
   height: auto;
 }
+
 .avaliacao {
   display: flex;
   color: var(--rice);
@@ -320,7 +335,7 @@ main {
 .btn-pratos button:hover {
   background-color: var(--salmon);
   transform: scale(1.1);
-  box-shadow: 0px 0px 8px rgba(255,255,255,0.5);
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
 }
 
 .container-info-preco button {
@@ -336,7 +351,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
+
   position: fixed;
   bottom: 0;
   left: 0;
@@ -365,6 +380,22 @@ footer {
   color: #c5c1c1;
 }
 
-span {
-  color: var(--salmon);
+
+@media (min-width: 550px) {
+
+  header,
+  nav,
+  .destaques,
+  main,
+  footer {
+    width: 500px;
+    flex: none;
+    margin: 0 auto;
+
+  }
+
+    footer {
+    left: 50%;
+    transform: translateX(-50%); /* centraliza o rodapé fixo */
+  }
 }
