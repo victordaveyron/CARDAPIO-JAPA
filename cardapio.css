@@ -20,6 +20,7 @@ input {
 }
 
 
+
 a {
   color: var(--salmon);
   outline: none;
@@ -28,8 +29,10 @@ a {
 
 body {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 3px;
-  flex-wrap: wrap;
   background: var(--black);
 }
 
@@ -45,7 +48,7 @@ main {
 header {
   justify-content: space-around;
   align-items: center;
-  flex: 1 1 100vw;
+  min-width: 400px;
   height: 50px;
   background-color: var(--black);
 }
@@ -212,7 +215,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex: 1 1 100vw;
+ 
   height: 150px;
   padding: 2px;
   background-color: var(--black);
@@ -260,19 +263,22 @@ nav {
 .itens-menu p {
   color: var(--rice);
 }
+span {
+  color: var(--salmon);
+}
 
 /*----------------------------*/
 /* MAIS PEDIDOS */
 main {
 
-  height: 800px;
+  height: 850px;
   margin-top: 30px;
   background-color: var(--black);
-  padding-bottom: 100px;
 }
 
 .populares {
   flex-direction: column;
+  padding-bottom:200px;
 }
 
 .titulo-populares {
@@ -383,18 +389,36 @@ footer {
 
 @media (min-width: 550px) {
 
-  header,
+ 
   nav,
   .destaques,
   main,
   footer {
-    width: 500px;
+    width: 550px;
     flex: none;
-    margin: 0 auto;
+    margin:3px;
 
   }
 
+   header {
+    width: 100%;
+   }
+
+   .search-container input[type="text"] {
+  font-size: 12pt;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  width: 300px;
+  transition: 0.3s;
+}
+
+.search-container input[type="text"]:focus {
+  width: 400px;
+}
+
     footer {
+    width: 100%;
     left: 50%;
     transform: translateX(-50%); /* centraliza o rodapé fixo */
   }

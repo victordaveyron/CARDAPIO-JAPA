@@ -284,6 +284,65 @@
   
   <script src="script.js"></script>
   <script src="busca.js"></script>
+  <script>
+  const carrossel = document.querySelector('.carrossel');
+  const slides = document.querySelectorAll('.slide');
+  const navDots = document.querySelectorAll('.nav span');
+
+  /* --------------------------
+     ARRASTAR COM O MOUSE
+  --------------------------- */
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  carrossel.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - carrossel.offsetLeft;
+    scrollLeft = carrossel.scrollLeft;
+  });
+
+  carrossel.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
+
+  carrossel.addEventListener('mouseup', () => {
+    isDown = false;
+  });
+
+  carrossel.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carrossel.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    carrossel.scrollLeft = scrollLeft - walk;
+  });
+
+  /* --------------------------
+     DOTS / BOLINHAS CLIQUE
+  --------------------------- */
+  navDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      const slideWidth = slides[0].offsetWidth;
+      carrossel.scrollTo({
+        left: slideWidth * index,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  /* --------------------------
+     ATUALIZAR BOLINHAS
+  --------------------------- */
+  carrossel.addEventListener('scroll', () => {
+    const slideWidth = slides[0].offsetWidth;
+    const index = Math.round(carrossel.scrollLeft / slideWidth);
+
+    navDots.forEach(dot => dot.style.opacity = '0.4');
+    navDots[index].style.opacity = '1';
+  });
+</script>
+
 </body>
 
 </html>

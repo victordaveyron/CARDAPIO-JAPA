@@ -169,3 +169,34 @@ footer {
 span {
   color: var(--salmon);
 }
+
+@media (min-width: 550px) {
+
+
+  header,
+  main,
+  footer {
+    width: 550px;
+    flex: none;
+    margin: 3px;
+
+  }
+
+  header {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  main {
+   margin: 0 auto;
+   height: 400px;
+  }
+
+  footer {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* centraliza o rodapé fixo */
+  }
+
+}

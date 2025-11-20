@@ -1,7 +1,7 @@
 :root {
-    --salmon: #f74343;
-    --black: #1c1c1c;
-    --rice: #f6f8db;
+  --salmon: #f74343;
+  --black: #1c1c1c;
+  --rice: #f6f8db;
 }
 
 * {
@@ -14,7 +14,7 @@
 
 input {
   background-color: var(--black);
-  box-shadow: 0px 0px 3px rgba(255, 255,255,0.8);
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.8);
   color: var(--rice);
   padding: 0 10px;
 }
@@ -33,7 +33,7 @@ body {
   background: var(--black);
 }
 
-header, 
+header,
 .destaques,
 nav,
 main {
@@ -54,7 +54,7 @@ header img {
   width: 30px;
 }
 
-header h2{
+header h2 {
   color: var(--rice);
 }
 
@@ -77,11 +77,12 @@ main {
   margin: 10px;
   gap: 5px;
   padding-bottom: 3px;
-  border-bottom: 1px solid var(--rice);
+  border-bottom: 1px solid rgba(246, 248, 219, 0.1);
 }
 
 .pratos {
   flex-direction: column;
+
 }
 
 .titulo-pratos {
@@ -101,6 +102,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 3px;
+  padding-bottom: 5px;
   gap: 3px;
 }
 
@@ -112,6 +114,8 @@ main {
   display: flex;
   justify-content: space-around;
   gap: 30px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .preco {
@@ -122,15 +126,18 @@ main {
 .avaliacao img {
   width: 15px;
   height: auto;
+
 }
 
 .preco img {
   width: 17px;
   height: auto;
 }
+
 .avaliacao {
   display: flex;
   color: var(--rice);
+
 }
 
 .btn-pratos {
@@ -142,7 +149,7 @@ main {
   background-color: var(--salmon);
   color: var(--rice);
   transform: scale(1.1);
-  box-shadow: 0px 0px 8px rgba(255,255,255,0.5);
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
 }
 
 .container-info-preco button {
@@ -156,7 +163,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
+
   position: fixed;
   bottom: 0;
   left: 0;
@@ -183,4 +190,42 @@ footer {
 
 .menu-footer h4 {
   color: #c5c1c1;
+}
+
+@media (min-width: 550px) {
+
+
+  header,
+  main,
+  .container-pratos,
+  footer {
+    width: 550px;
+    flex: none;
+    margin: 3px;
+
+
+  }
+
+  header {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  main {
+    margin: 0 auto;
+    flex: none;
+  }
+
+  .container-info-preco {
+    min-width: 500px;
+    margin: 40px;
+  }
+
+  footer {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* centraliza o rodapé fixo */
+  }
+
 }

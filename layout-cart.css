@@ -352,3 +352,41 @@ footer {
 .menu-footer h4 {
   color: #c5c1c1;
 }
+
+@media (min-width: 550px) {
+
+
+  header,
+  main,
+  .container-pratos,
+  footer {
+    width: 550px;
+    flex: none;
+    margin: 3px;
+
+
+  }
+
+  header {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  main {
+    margin: 0 auto;
+    flex: none;
+  }
+
+  .container-info-preco {
+    min-width: 500px;
+    margin: 40px;
+  }
+
+  footer {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* centraliza o rodapé fixo */
+  }
+
+}
