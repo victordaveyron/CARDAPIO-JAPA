@@ -49,11 +49,12 @@ main {
 aside {
     justify-content: flex-start;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    flex: 1 20 100vw;
-    height: 200px;
+    flex: 1 1 100vw;
+    height: 150px;
     padding: 3px;
-    /*border: 1px solid red;*/
+    border: 1px solid red;
 }
 
 .btn-main {
